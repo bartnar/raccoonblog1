@@ -1,0 +1,92 @@
+.blog-post {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    margin: 55px 0;
+    .blog-post-image {
+        margin: 0 0 10px 0;
+
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: inherit;
+        height: 200px;
+    }
+    .blogoflowers {
+        background-image: url(../assets/img/desktop/art1.png);
+    }
+    .colorful {
+        background-image: url(../assets/img/desktop/art2.png);
+    }
+    .blog-post-title {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+        color: $mainGrayColor;
+    }
+    .blog-post-info {
+        display: flex;
+        margin: 0 0 10px 0;
+        justify-content: flex-start;
+        align-items: center;
+        border-top: $blogPostBorder;
+        border-bottom: $blogPostBorder;
+        font-size: 12px;
+        height: 40px;
+        .blog-post-date {
+            margin-right: 35px;
+            flex-grow: 1;
+        }
+        .blog-post-date::before {
+            content: url(../assets/svg/extra/clock_.svg);
+            margin: 0 10px 0 10px;
+        }
+        .blog-post-author {
+            flex-grow: 1;
+        }
+
+        .footprint {
+            margin-right: 10px;
+        }
+    }
+    .blog-post-social {
+        display: flex;
+        margin-left: 70px;
+        justify-content: flex-end;
+        flex-grow: 4;
+        .social-counter {
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: white;
+            left: -20px;
+            top: 4px;
+            user-select: none;
+        }
+        .social {
+            border-radius: 3px;
+            cursor: pointer;
+            fill: #d1dae3;
+        }
+
+        .facebook-icon:hover {
+            fill: #3c5a98;
+        }
+        .gplus-icon:hover {
+            fill: #c25234;
+        }
+        .twitter-icon:hover {
+            fill: #00aced;
+        }
+        .vk-icon:hover {
+            fill: #48729e;
+        }
+        .yandex-icon:hover {
+            fill: #d83933;
+        }
+    }
+    .blog-post-content {
+        font-size: 14px;
+        color: $mainGrayColor;
+    }
+}

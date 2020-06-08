@@ -1,0 +1,16 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: '. content extra .';
+    grid-gap: 30px;
+
+    .content {
+        grid-area: content;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .extra {
+        grid-area: extra;
+    }
+}

@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: $mainBlueColor;
+    font-weight: 500;
+    height: 160px;
+    .title {
+        @include flexCenter(row);
+        font-size: 38px;
+        letter-spacing: 10px;
+        height: 100px;
+        margin: 0 40px 0 0;
+
+        .logo {
+            background-image: url(../assets/img/racoon.svg);
+            background-size: cover;
+            margin: 0 10px 0 0;
+            height: 58px;
+            width: 58px;
+        }
+    }
+    .navigation {
+        background-color: $mainBlueColor;
+        .nav-items {
+            @include flexCenter(row);
+            font-family: 'Roboto', sans-serif;
+            color: $navItemsColor;
+            font-size: 20px;
+            font-weight: 300;
+            width: 750px;
+            margin: 0 auto;
+            height: 60px;
+            list-style-type: none;
+            li {
+                flex-grow: 1;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

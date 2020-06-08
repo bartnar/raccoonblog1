@@ -1,0 +1,42 @@
+.extra {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    .about,
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin: 55px 0 0 0;
+
+        .about-header,
+        .info-header {
+            display: flex;
+            align-content: flex-end;
+            div {
+                align-self: flex-end;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                color: $mainBlueColor;
+                margin: 0 0 0 10px;
+                letter-spacing: 2px;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .about-text,
+        .info-text {
+            text-align: justify;
+            border-top: $extraBorder;
+            color: $mainGrayColor;
+            font-size: 14px;
+            padding: 15px 0 0 0;
+        }
+    }
+    .info {
+        margin: 25px 0 0 0;
+    }
+}

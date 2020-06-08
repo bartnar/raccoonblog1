@@ -1,0 +1,13 @@
+$mainBlueColor: #6b9ad0;
+$mainGrayColor: #69747c;
+$socialBtnColor: #d1dae3;
+$navItemsColor: #fefefe;
+$blogPostBorder: 1px solid $mainGrayColor;
+$extraBorder: 5px solid $mainBlueColor;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
