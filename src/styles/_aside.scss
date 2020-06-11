@@ -13,7 +13,7 @@
         .info-header {
             display: flex;
             align-content: flex-end;
-            div {
+            h3 {
                 align-self: flex-end;
                 font-family: 'Montserrat', sans-serif;
                 font-size: 20px;
@@ -22,9 +22,20 @@
                 margin: 0 0 0 10px;
                 letter-spacing: 2px;
             }
-            img {
+            .extras-icon {
                 width: 30px;
                 height: 30px;
+                background-size: contain;
+            }
+        }
+        .about-header {
+            .questionmark {
+                background-image: url(../assets/svg/extra/qm58_58.svg);
+            }
+        }
+        .info-header {
+            .exclamation {
+                background-image: url(../assets/svg/extra/exl58_58.svg);
             }
         }
         .about-text,
