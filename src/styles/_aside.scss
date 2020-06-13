@@ -50,4 +50,17 @@
     .info {
         margin: 25px 0 0 0;
     }
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 25px 0 0 0;
+        .tag {
+            background-image: url(../assets/svg/extra/tag.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: rotate(45deg);
+            height: 20px;
+            width: 100px;
+        }
+    }
 }

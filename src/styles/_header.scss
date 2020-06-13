@@ -1,3 +1,7 @@
+#about,
+#info {
+    display: none;
+}
 header {
     display: flex;
     flex-direction: column;
@@ -33,32 +37,33 @@ header {
             width: 750px;
             height: 60px;
             list-style-type: none;
-            margin: 0 40px 0 0;
             li {
                 margin: 0 auto;
+                position: relative;
                 a {
                     text-decoration: none;
                     color: inherit;
                 }
             }
+            li:target::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: 50%;
+                margin-left: -12px;
+                bottom: -33px;
+                box-sizing: border-box;
+                border-width: 8px;
+                border-style: solid;
+                border-color: transparent transparent $mainBlueColor
+                    $mainBlueColor;
+
+                transform-origin: 0 0;
+                transform: rotate(-45deg);
+
+                box-shadow: -2px 2px 0px 1px rgba(198, 222, 250, 1);
+            }
         }
-    }
-    .navigation::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: 50%;
-        margin-left: -16px;
-        bottom: -16px;
-        box-sizing: border-box;
-        border-width: 8px;
-        border-style: solid;
-        border-color: transparent transparent $mainBlueColor $mainBlueColor;
-
-        transform-origin: 0 0;
-        transform: rotate(-45deg);
-
-        box-shadow: -2px 2px 0px 1px rgba(198, 222, 250, 1);
     }
 }
