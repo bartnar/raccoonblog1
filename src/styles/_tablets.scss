@@ -11,10 +11,14 @@
         position: absolute;
         right: 0%;
     }
-    .navigation {
-        position: sticky;
-        position: -webkit-sticky;
+    .sticky {
+        position: fixed;
         top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .sticky + main {
+        padding-top: 60px;
     }
     .about-btn,
     .info-btn {
@@ -37,7 +41,9 @@
     }
 
     #about:target::after,
-    #info:target::after {
+    #info:target::after,
+    #about:hover::after,
+    #info:hover::after {
         content: '';
         position: absolute;
         width: 0;

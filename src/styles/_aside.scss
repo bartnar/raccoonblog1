@@ -53,14 +53,47 @@
     .tags {
         display: flex;
         flex-wrap: wrap;
-        margin: 25px 0 0 0;
+        margin: 18px 0 0 0;
         .tag {
-            background-image: url(../assets/svg/extra/tag.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            transform: rotate(45deg);
-            height: 20px;
-            width: 100px;
+            color: white;
+            background: $mainBlueColor;
+            display: inline-block;
+            color: #fff;
+            position: relative;
+            font-size: 12px;
+            padding: 3px 12px 3px 12px;
+            margin: 7px 20px 0 0;
+            text-decoration: none;
+        }
+        .tag::before {
+            background: #fff;
+            width: 6px;
+            height: 6px;
+            content: '';
+            display: inline-block;
+            border-radius: 20px;
+            margin: 0 8px 1px 0;
+        }
+
+        .tag::after {
+            display: inline-block;
+            border: 10px solid;
+            border-color: transparent transparent transparent $mainBlueColor;
+            height: 0;
+            width: 0;
+            position: absolute;
+            right: -20px;
+            top: 0;
+            content: '';
+        }
+        .tag:after::before {
+            background: #fff;
+            width: 6px;
+            height: 6px;
+            content: '';
+            display: inline-block;
+            border-radius: 20px;
+            margin: 0 5px 1px 2px;
         }
     }
 }

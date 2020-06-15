@@ -8,7 +8,7 @@ header {
     font-family: 'Montserrat', sans-serif;
     color: $mainBlueColor;
     font-weight: 500;
-    height: 160px;
+    // height: 160px;
     .title {
         @include flexCenter(row);
         font-size: 38px;
@@ -22,48 +22,49 @@ header {
             width: 58px;
         }
     }
-    .navigation {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        background-color: $mainBlueColor;
-        box-shadow: 0px 3px 0px 0px #c6defa;
-        .nav-links {
-            @include flexCenter(row);
-            font-family: 'Roboto', sans-serif;
-            color: $navItemsColor;
-            font-size: 20px;
-            font-weight: 300;
-            width: 750px;
-            height: 60px;
-            list-style-type: none;
-            li {
-                margin: 0 auto;
-                position: relative;
-                a {
-                    text-decoration: none;
-                    color: inherit;
-                }
+}
+.navigation {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: $mainBlueColor;
+    box-shadow: 0px 3px 0px 0px #c6defa;
+    .nav-links {
+        @include flexCenter(row);
+        font-family: 'Roboto', sans-serif;
+        color: $navItemsColor;
+        font-size: 20px;
+        font-weight: 300;
+        width: 750px;
+        height: 60px;
+        list-style-type: none;
+        margin: 0 40px 0 0;
+        li {
+            margin: 0 auto;
+            position: relative;
+            a {
+                text-decoration: none;
+                color: inherit;
             }
-            li:target::after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                left: 50%;
-                margin-left: -12px;
-                bottom: -33px;
-                box-sizing: border-box;
-                border-width: 8px;
-                border-style: solid;
-                border-color: transparent transparent $mainBlueColor
-                    $mainBlueColor;
+        }
+        li:target::after,
+        li:hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            margin-left: -12px;
+            bottom: -33px;
+            box-sizing: border-box;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent $mainBlueColor $mainBlueColor;
 
-                transform-origin: 0 0;
-                transform: rotate(-45deg);
+            transform-origin: 0 0;
+            transform: rotate(-45deg);
 
-                box-shadow: -2px 2px 0px 1px rgba(198, 222, 250, 1);
-            }
+            box-shadow: -2px 2px 0px 1px rgba(198, 222, 250, 1);
         }
     }
 }
