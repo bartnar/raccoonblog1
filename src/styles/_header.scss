@@ -8,7 +8,6 @@ header {
     font-family: 'Montserrat', sans-serif;
     color: $mainBlueColor;
     font-weight: 500;
-    // height: 160px;
     .title {
         @include flexCenter(row);
         font-size: 38px;

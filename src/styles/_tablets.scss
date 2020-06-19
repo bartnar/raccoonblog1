@@ -1,4 +1,11 @@
 @media screen and (max-width: 1024px) {
+    .navigation {
+        .nav-links {
+            li {
+                margin: 0 auto;
+            }
+        }
+    }
     #about,
     #info {
         display: block;
@@ -68,5 +75,21 @@
     main {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas: '. content .';
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .navigation {
+        justify-content: flex-start;
+        .nav-links {
+            font-size: 18px;
+            li {
+                margin: 0 35px;
+            }
+            #about,
+            #info {
+                margin: 0 auto;
+            }
+        }
     }
 }

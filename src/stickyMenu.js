@@ -2,7 +2,7 @@ window.onscroll = function () {
     stickyScroll();
 };
 
-const menu = document.getElementById('menu');
+const menu = document.getElementById(['menu']);
 
 const sticky = menu.offsetTop;
 
