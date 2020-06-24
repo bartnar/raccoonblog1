@@ -13,34 +13,32 @@
                 <span class="site-name-right">NBLOG</span>
             </div>
         </header>
-        <nav id="menu" class="navigation">
-            <ul class="nav-links">
-                <li id="about">
-                    <a class="about-btn" href="#about">
-                        <div class="about-icon"></div
-                    ></a>
-                </li>
-                <li id="js">
-                    <a class="nav-link" href="#js">JAVASCRIPT</a>
-                </li>
-                <li id="css"><a class="nav-link" href="#css">CSS</a></li>
-                <li id="latest">
-                    <a class="nav-link" href="#latest">LATEST</a>
-                </li>
-                <li id="html"><a class="nav-link" href="#html">HTML</a></li>
-                <li id="design">
-                    <a class="nav-link" href="#design">DESIGN</a>
-                </li>
-                <li id="info">
-                    <a class="info-btn" href="#info"
-                        ><div class="info-icon"></div
-                    ></a>
-                </li>
-            </ul>
-        </nav>
-        <main>
+        <nav id="menu" class="navigation"></nav>
+        <main id="main">
             <div id="content" class="content"></div>
             <aside id="aside" class="extra laptop"></aside>
         </main>
+        <script>
+            function aboutClick() {
+                if (aboutTablet.style.display === 'none') {
+                    aboutTablet.style.display = 'flex';
+                    main.style.transition = '0.7s';
+                    main.style.marginTop = '80px';
+                } else {
+                    aboutTablet.style.display = 'none';
+                    main.style.marginTop = '0px';
+                }
+            }
+            function infoClick() {
+                if (infoTablet.style.display === 'none') {
+                    infoTablet.style.display = 'flex';
+                    main.style.transition = '0.7s';
+                    main.style.marginTop = '80px';
+                } else {
+                    infoTablet.style.display = 'none';
+                    main.style.marginTop = '0px';
+                }
+            }
+        </script>
     </body>
 </html>

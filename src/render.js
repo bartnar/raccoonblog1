@@ -10,7 +10,7 @@ window.onload = function () {
     };
 };
 const Create = {
-    renderTags: () => {
+    renderTagsLaptop: () => {
         let view = /*html*/ `
                 <div id="tags" class="tags">
                     <div class="tag">Raccoon</div>
@@ -28,6 +28,26 @@ const Create = {
                 </div>
     
     `;
+        return view;
+    },
+    renderTagsTablet: () => {
+        let view = /*html*/ `
+                <div id="tags" class="tags">
+                    <div class="tag">Raccoon</div>
+                    <div class="tag">Raccoon</div>
+                    <div class="tag">Raccoon</div>
+                    <div class="tag">Dog</div>
+                    <div class="tag">Cat</div>
+                    <div class="tag">Developer</div>
+                    <div class="tag">Cat</div>
+                    <div class="tag">Raccoon</div>
+                    <div class="tag">Dog</div>
+                    <div class="tag">Cat</div>
+                    <div class="tag">Developer</div>
+                    <div class="tag">Raccoon</div>
+                    <div class="tag">Raccoon</div>
+                </div>  
+        `;
         return view;
     },
     renderContent: () => {
@@ -399,15 +419,109 @@ const Create = {
         `;
         return view;
     },
+    renderNavbarLaptop: () => {
+        let view = /*html*/ `
+        <ul class="nav-links">
+                
+                <li id="js">
+                    <a class="nav-link" href="#js">JAVASCRIPT</a>
+                </li>
+                <li id="css"><a class="nav-link" href="#css">CSS</a></li>
+                <li id="latest">
+                    <a class="nav-link" href="#latest">LATEST</a>
+                </li>
+                <li id="html"><a class="nav-link" href="#html">HTML</a></li>
+                <li id="design">
+                    <a class="nav-link" href="#design">DESIGN</a>
+                </li>
+                
+        </ul>
+        `;
+        return view;
+    },
+    renderNavbarTablet: () => {
+        let view = /*html*/ `
+        <ul class="nav-links">
+                <li id="about">
+                    <a class="about-btn" href="#about">
+                        <div onclick="aboutClick()" id="aboutIcon" class="about-icon"></div
+                    ></a>
+                </li>
+                <li id="js">
+                    <a class="nav-link" href="#js">JAVASCRIPT</a>
+                </li>
+                <li id="css"><a class="nav-link" href="#css">CSS</a></li>
+                <li id="latest">
+                    <a class="nav-link" href="#latest">LATEST</a>
+                </li>
+                <li id="html"><a class="nav-link" href="#html">HTML</a></li>
+                <li id="design">
+                    <a class="nav-link" href="#design">DESIGN</a>
+                </li>
+                <li id="info">
+                    <a class="info-btn" href="#info"
+                        ><div onclick="infoClick()" id="infoIcon" class="info-icon"></div
+                    ></a>
+                </li>
+        </ul>
+        `;
+        return view;
+    },
+    renderAboutTablet: () => {
+        let view = /*html*/ `
+            <div id="aboutTablet" class="about-wrapper-tablet">
+                <h3 class="about-header-tablet">ABOUT</h3>
+                <div class="about-text-tablet">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Enim sed eveniet consectetur itaque ullam libero
+                    aspernatur neque facere eaque, assumenda porro ducimus
+                    quibusdam ut autem vero harum fugiat aut? Dolorum! Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptate cum accusantium quae eum maxime delectus
+                    nostrum laborum in. Nostrum ipsum nisi distinctio fuga
+                    maxime quae dolor ab vitae porro doloribus. Dolorem.
+                </div>
+            </div>
+        `;
+        return view;
+    },
+    renderInfoTablet: () => {
+        let view = /*html*/ `
+            <div id="infoTablet" class="info-wrapper-tablet">
+                <div class="info-text-tablet">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Enim sed eveniet consectetur itaque ullam libero
+                    aspernatur neque facere eaque, assumenda porro ducimus
+                    quibusdam ut autem vero harum fugiat aut? Dolorum! Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit.
+                    Voluptate cum accusantium quae eum maxime delectus
+                    nostrum laborum in. Nostrum ipsum nisi distinctio fuga
+                    maxime quae dolor ab vitae porro doloribus. Dolorem.
+                </div>
+                <h3 class="info-header-tablet">INFORM</h3>
+            </div>
+        `;
+        return view;
+    },
 };
 
-export function contentPosition(currWidth) {
+function contentPosition(currWidth) {
     if (currWidth > tabletWidth) {
+        document.getElementById([
+            'menu',
+        ]).innerHTML = Create.renderNavbarLaptop();
         document.getElementById(['aside']).innerHTML =
-            Create.renderAsideLaptop() + Create.renderTags();
+            Create.renderAsideLaptop() + Create.renderTagsLaptop();
         document.getElementById(['content']).innerHTML = Create.renderContent();
     } else if (currWidth <= tabletWidth) {
         document.getElementById(['content']).innerHTML =
-            Create.renderTags() + Create.renderContent();
+            Create.renderAboutTablet() +
+            Create.renderInfoTablet() +
+            Create.renderTagsTablet() +
+            Create.renderContent();
+        document.getElementById([
+            'menu',
+        ]).innerHTML = Create.renderNavbarTablet();
     }
 }
+module.exports = contentPosition;

@@ -4,10 +4,9 @@ window.onscroll = function () {
 
 const menu = document.getElementById(['menu']);
 
-const sticky = menu.offsetTop;
-
 export function stickyScroll() {
-    if (window.pageYOffset > sticky) {
+    if (window.pageYOffset > 100) {
+        console.log(menu.offsetTop);
         menu.classList.add('sticky');
     } else {
         menu.classList.remove('sticky');

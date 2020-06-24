@@ -1,6 +1,7 @@
 @media screen and (max-width: 1024px) {
     .navigation {
         .nav-links {
+            height: 60px;
             li {
                 margin: 0 auto;
             }
@@ -62,7 +63,7 @@
         border-width: 8px;
         border-style: solid;
         border-color: transparent transparent #96beeb #96beeb;
-
+        z-index: 6;
         transform-origin: 0 0;
         transform: rotate(-45deg);
 
@@ -72,9 +73,79 @@
     .extra {
         display: none;
     }
+    #tags {
+        margin: 40px 0 -20px 0;
+        justify-content: space-evenly;
+    }
     main {
         grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: '. content .';
+    }
+    .about-wrapper-tablet {
+        display: none;
+        position: absolute;
+        top: 113px;
+        left: 0%;
+        max-width: 848px;
+        height: 120px;
+        font-size: 14px;
+        color: $mainGrayColor;
+        margin-top: 50px;
+        overflow: auto;
+        padding: 20px 20px 35px 0px;
+        .about-header-tablet {
+            display: inline;
+            background: rgba(198, 222, 250, 0.3);
+            color: $mainBlueColor;
+            position: relative;
+            transform: rotate(-90deg);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 2px;
+            top: -10px;
+            left: -24px;
+            padding: 25px 25px 0px 10px;
+        }
+
+        .about-text-tablet {
+            position: relative;
+            left: 0%;
+            width: 100%;
+        }
+    }
+    .info-wrapper-tablet {
+        display: none;
+        position: absolute;
+        top: 113px;
+        right: -17px;
+        max-width: 848px;
+        height: 120px;
+        font-size: 14px;
+        color: $mainGrayColor;
+        margin-top: 50px;
+        overflow: auto;
+        padding: 20px 25px 35px 0px;
+        .info-header-tablet {
+            display: inline;
+            background: rgba(198, 222, 250, 0.3);
+            color: $mainBlueColor;
+            position: relative;
+            transform: rotate(-90deg);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 17px;
+            letter-spacing: 2px;
+            top: -12px;
+            left: 45px;
+            padding: 20px 45px 0px 10px;
+        }
+        .info-text-tablet {
+            position: relative;
+            left: 20px;
+            width: 100%;
+        }
     }
 }
 
