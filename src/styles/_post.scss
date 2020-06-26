@@ -52,44 +52,45 @@
             height: 18px;
         }
     }
-    .blog-post-social {
-        display: flex;
-        margin-left: 70px;
-        justify-content: flex-end;
-        flex-grow: 4;
-        .social-counter {
-            position: relative;
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            color: white;
-            left: -20px;
-            top: 4px;
-            user-select: none;
-        }
-        .social {
-            border-radius: 3px;
-            cursor: pointer;
-            fill: #d1dae3;
-        }
 
-        .facebook-icon:hover {
-            fill: #3c5a98;
-        }
-        .gplus-icon:hover {
-            fill: #c25234;
-        }
-        .twitter-icon:hover {
-            fill: #00aced;
-        }
-        .vk-icon:hover {
-            fill: #48729e;
-        }
-        .yandex-icon:hover {
-            fill: #d83933;
-        }
-    }
     .blog-post-content {
         font-size: 14px;
         color: $mainGrayColor;
+    }
+}
+.blog-post-social {
+    display: flex;
+    margin-left: 70px;
+    justify-content: flex-end;
+    flex-grow: 4;
+    .social-counter {
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: white;
+        left: -20px;
+        top: 4px;
+        user-select: none;
+    }
+    .social {
+        border-radius: 3px;
+        cursor: pointer;
+        fill: #d1dae3;
+    }
+
+    .facebook-icon:hover {
+        fill: #3c5a98;
+    }
+    .gplus-icon:hover {
+        fill: #c25234;
+    }
+    .twitter-icon:hover {
+        fill: #00aced;
+    }
+    .vk-icon:hover {
+        fill: #48729e;
+    }
+    .yandex-icon:hover {
+        fill: #d83933;
     }
 }

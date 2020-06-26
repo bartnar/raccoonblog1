@@ -81,6 +81,8 @@
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: '. content .';
+        margin: 0 auto;
+        width: 768px;
     }
     .about-wrapper-tablet {
         display: none;
@@ -145,6 +147,41 @@
             position: relative;
             left: 20px;
             width: 100%;
+        }
+    }
+    .blog-post {
+        margin: 50px auto;
+        width: 600px;
+    }
+    .blog-post-wrapper {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    .blog-post-social {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: -30px;
+        .facebook-icon {
+            fill: #3c5a98;
+        }
+        .gplus-icon {
+            fill: #c25234;
+        }
+        .twitter-icon {
+            fill: #00aced;
+        }
+        .vk-icon {
+            fill: #48729e;
+        }
+        .yandex-icon {
+            fill: #d83933;
+        }
+        .social-counter {
+            top: -20px;
+            left: 30px;
         }
     }
 }
